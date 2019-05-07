@@ -1,11 +1,57 @@
 <!--DEV
 
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
 
 -->
 
 <header class="page-header" role="banner">
-  page-header
+
+  <a href="#" class="logo" title="Logo">
+    <img src="img/_logo.svg" alt="logo">
+  </a>
+
+  <div class="main-nav">
+
+    <nav class="topbar-nav is-hoverable">
+      <ul class="metismenu" id="menu-main">
+        <li>
+          <a href="#" aria-expanded="false">Новини</a>
+        </li>
+        <li>
+          <a href="#" aria-expanded="false">Оренда</a>
+        </li>
+        <li>
+          <a class="has-arrow" href="#" aria-expanded="false">Сервіси</a>
+          <ul class="mm-collapse">
+            <li><a href="#">item 2.1</a></li>
+            <li><a href="#">item 2.2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="has-arrow" href="#" aria-expanded="false">Про нас</a>
+          <ul class="mm-collapse">
+            <li><a href="#">item 2.1</a></li>
+            <li><a href="#">item 2.2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" aria-expanded="false">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <ul>
+      <li></li>
+      <li></li>
+    </ul> -->
+
+    <button id="main-nav-toggler" class="burger main-nav__toggler"><span></span></button>
+
+  </div>
+
 </header>
+
+
+
+
+

@@ -13,15 +13,23 @@
   <div class="page__inner">
 
     <div class="page__content">
-      @@include('blocks/page-header/page-header.html')
+
+      <div class="container" style="background-color: #fff;">
+        @@include('blocks/page-header/page-header.html')
+      </div>
 
       <main role="main">
 
-        <h3>Ghdtn</h3>
-        <a href="#" class="btn">Кнопка</a>
-        <a href="#" class="btn  btn--pagination-num">5</a>
-        <a href="#" class="btn  btn--prev">Prev</a>
-        <a href="#" class="btn  btn--next">Next</a>
+        <div class="container">
+
+          <h3>Ghdtn</h3>
+          <a href="#" class="btn">Кнопка</a>
+          <button class="btn" disabled>Кнопка</button>
+          <a href="#" class="btn  btn--pagination-num">5</a>
+          <button class="btn  btn--prev">Prev</button>
+          <a href="#" class="btn  btn--next btn--disabled">Next</a>
+
+        </div>
 
       </main>
 
