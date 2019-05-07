@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <h3>Ghdtn</h3>
+        <a href="#" class="btn">Кнопка</a>
+        <a href="#" class="btn  btn--pagination-num">5</a>
+        <a href="#" class="btn  btn--prev">Prev</a>
+        <a href="#" class="btn  btn--next">Next</a>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
