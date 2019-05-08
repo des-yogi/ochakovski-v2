@@ -41,7 +41,9 @@
     "service-slider": [],
     "service-price": [],
     "order-modal": [],
-    "lang-switcher": []
+    "lang-switcher": [],
+    "language-select": [],
+    "pushy": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -61,6 +63,7 @@
     "./node_modules/swiper/dist/js/swiper.js",
     "./node_modules/blazy/blazy.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/@cmyee/pushy/js/pushy.js",
     "./node_modules/metismenu/dist/metisMenu.js"
   ],
   "addJsAfter": [

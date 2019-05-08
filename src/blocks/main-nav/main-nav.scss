@@ -14,16 +14,18 @@ $toggler-part-bg-color:       #000 !default;
 $transition-time:             0.3s !default;
 
 .main-nav {
-
-  $block-name:                &; // #{$block-name}__element
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 10;
+
+  $block-name:                &; // #{$block-name}__element
 
   // переключатель
 
   &__toggler {
-    display: inline-block;
     padding: 0;
     background: none;
     border: none;
