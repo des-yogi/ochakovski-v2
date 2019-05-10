@@ -25,7 +25,6 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  color: #000;
   overflow: hidden;
   cursor: pointer;
 
@@ -34,12 +33,13 @@
   &::before {
     position: absolute;
     top: 15px;
-    right: 0;
+    right: 5px;
     content: "";
     display: block;
     width: 11px;
     height: 6px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='%23CA2E34'%3E%3Cpath d='M7.2 8A1.69 1.69 0 0 1 6 7.51L.29 1.74A1 1 0 0 1 .35.28a1.14 1.14 0 0 1 1.55 0l5.3 5.35L12.08.36a1.14 1.14 0 0 1 1.54-.1 1 1 0 0 1 .11 1.46L8.44 7.47A1.69 1.69 0 0 1 7.23 8z'/%3E%3C/svg%3E");
+    transition: all .3s ease-out;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -53,17 +53,13 @@
     min-height: 35px;
     //margin-bottom: 10px;
     text-align: center;
+    color: #000;
     background: #fff;
+    cursor: pointer;
 
     &.active {
       order: 1;
-      pointer-events: none;
-    }
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background: #fff;
+      //pointer-events: none;
     }
 
     &:last-child {
@@ -72,19 +68,26 @@
   }
 
   &__link {
-    padding: 5px 20px 5px 3px;
+    padding: 5px 25px 5px 5px;
     font-size: inherit;
     font-weight: inherit;
     text-decoration: none;
     text-transform: none;
     color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $color-warning !important;
+    }
   }
 
   &--open {
     height: auto;
+    box-shadow: $box-shadow;
 
     &::before {
-      transform:scale(1, -1);
+      // transform:scale(1, -1);
+      transform: rotate(180deg);
     }
   }
 }

@@ -43,7 +43,8 @@
     "order-modal": [],
     "lang-switcher": [],
     "language-select": [],
-    "pushy": []
+    "pushy": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
