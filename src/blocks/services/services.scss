@@ -1,9 +1,103 @@
-// В этом файле должны быть стили для БЭМ-блока services, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .services {
+  //padding-top: 50px;
+  padding-bottom: 50px;
+
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__inner {
+    background-color: $white;
+    box-shadow: $box-shadow;
+  }
+
+  &__col {
+    @include col(xs, 12);
+  }
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &:nth-child(odd) {
+
+      #{$block-name}__text {
+        border-right: 5px solid $color-warning;
+      }
+    }
+
+    &:nth-child(even) {
+
+      #{$block-name}__text {
+        border-left: 5px solid $color-warning;
+      }
+
+      @media (min-width: $screen-md) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $white !important;
+
+      .overlay {
+        transform: scale(1);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & > div {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding: 20px 25px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 70px 100px;
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+    color: currentColor;
+  }
+
+  &__descr {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 1;
+    color: currentColor;
+  }
 }

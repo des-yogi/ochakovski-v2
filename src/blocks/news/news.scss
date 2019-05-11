@@ -1,9 +1,16 @@
-// В этом файле должны быть стили для БЭМ-блока news, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .news {
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__container {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  &__slide {
+    align-items: stretch;
+    box-shadow: $box-shadow;
+  }
 }

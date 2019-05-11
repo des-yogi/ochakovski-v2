@@ -1,9 +1,35 @@
-// В этом файле должны быть стили для БЭМ-блока intro, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+$bg-color: #003c00 !default;
 
 .intro {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  // margin-bottom: 50px;
+
+  color: $white;
+  background-color: $bg-color;
+  background-image: url(../img/intro-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  //filter: brightness(0.3) blur(3px);
+
+  @media (min-width: $screen-md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin-bottom: 15px;
+    color: inherit;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: $font-weight--bold;
+    color: inherit;
+  }
 }

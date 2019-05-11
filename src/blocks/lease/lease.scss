@@ -1,9 +1,106 @@
-// В этом файле должны быть стили для БЭМ-блока lease, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .lease {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $gray-darker;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    color: $white;
+  }
+
+  &__intro {
+    margin-bottom: 20px;
+    color: $white;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        @include col-offset(md, 3);
+      }
+
+      @media (min-width: $screen-xl) {
+        @include col-offset(xl, 0);
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    background-color: $white;
+    color: $text-color;
+
+    @media (min-width: $screen-sm) {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__item-title,
+      #{$block-name}__item-descr {
+        z-index: 1;
+        color: $white;
+      }
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    flex: 1 1;
+    padding: 20px 40px 20px 25px;
+  }
+
+  &__item-title {
+    position: relative;
+    margin-top: 0;
+  }
+
+  &__item-descr {
+    position: relative;
+    margin-bottom: 0;
+  }
 }
