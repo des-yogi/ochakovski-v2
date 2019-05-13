@@ -32,4 +32,8 @@ $bg-color: #003c00 !default;
     font-weight: $font-weight--bold;
     color: inherit;
   }
+
+  &__descr {
+    font-weight: 600;
+  }
 }

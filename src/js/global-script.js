@@ -56,13 +56,16 @@
     spaceBetween: 20,
     slidesPerView: 2,
     grabCursor: true,
-    pagination: {
+    /*pagination: {
       el: '.swiper-pagination',
       type: 'progressbar',
-    },
+    },*/
     breakpointsInverse: true,
     breakpoints: {
       // when window width is >= 768px
+      480: {
+        slidesPerView: 3
+      },
       768: {
         slidesPerView: 4
       },

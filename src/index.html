@@ -23,9 +23,9 @@
         <li class="pushy-submenu">
           <a class="">Сервіси</a>
           <ul>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
-            <li class="pushy-link"><a href="#">Item 3</a></li>
+            <li class="pushy-link"><a href="#">Автомийка</a></li>
+            <li class="pushy-link"><a href="#">Лаунж-зона та кафе</a></li>
+            <li class="pushy-link"><a href="#">Паркінг</a></li>
           </ul>
         </li>
         <li class="pushy-link"><a href="#">Про нас</a></li>
@@ -178,14 +178,13 @@
               </div>
 
               <div class="lease__col">
-                <a href="#" class="lease__item" title="">
+                <a href="#" class="lease__item  lease__item--show-more" title="">
                   <span class="overlay  lease__item-overlay"></span>
-                  <div class="lease__item-img">
-                    <img class="b-lazy" data-src="img/lease-img.jpg" alt="Офісне приміщення">
+                  <div class="lease__item-img  lease__item-img--show-more">
+                    <img class="b-lazy" data-src="img/lease-img-btn.jpg" alt="Офісне приміщення">
                   </div>
-                  <div class="lease__item-text">
-                    <h4 class="lease__item-title">Показати більше приміщень</h4>
-                    <!-- <p class="lease__item-descr">Далеко-далеко за словесными горами в стране, гласных и согласных.</p> -->
+                  <div class="lease__item-text  lease__item-text--show-more">
+                    <h4 class="lease__item-title  lease__item-title--show-more">Показати<br> більше приміщень</h4>
                   </div>
                 </a>
               </div>
@@ -319,7 +318,11 @@
 
           </section>
 
-          <section class="partners">
+        </div>
+
+        <section class="partners">
+
+          <div class="container">
 
             <h2 class="partners__title">Наші партнери</h2>
 
@@ -327,7 +330,7 @@
 
               <div class="swiper-wrapper">
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
@@ -335,7 +338,7 @@
                   <div class="swiper-lazy-preloader"></div>
                 </a>
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
@@ -343,7 +346,7 @@
                   <div class="swiper-lazy-preloader"></div>
                 </a>
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
@@ -351,7 +354,7 @@
                   <div class="swiper-lazy-preloader"></div>
                 </a>
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
@@ -359,7 +362,7 @@
                   <div class="swiper-lazy-preloader"></div>
                 </a>
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
@@ -367,61 +370,76 @@
                   <div class="swiper-lazy-preloader"></div>
                 </a>
 
-                <a href="#" class="swiper-slide" title="Партнер">
+                <a href="#" class="swiper-slide  partners__slide" title="Партнер">
                   <picture>
                     <source srcset="img/partner-logo.jpg" type="">
                     <img class="swiper-lazy" data-src="img/partner-logo.jpg" alt="Партнер">
                   </picture>
                   <div class="swiper-lazy-preloader"></div>
                 </a>
-
 
               </div>
 
-              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-pagination"></div> -->
+
+            </div>
+
           </div>
 
-          </section>
+        </section>
+
+        <div class="container">
 
           <section class="gallery">
 
             <h2 class="gallery__title">Галерея</h2>
 
-            <div class="gallery__wrapper">
+            <div class="row  gallery__inner">
 
-              <div class="gallery__img">
-                <picture>
-                  <source srcset="img/gallery-img.jpg" media="" type="">
-                  <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
-                </picture>
+              <div class="gallery__col-1">
+
+                <div class="row">
+
+                  <div class="gallery__col-img">
+                    <div class="gallery__img">
+                      <picture>
+                        <source srcset="img/gallery-img.jpg" media="" type="">
+                        <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="gallery__col-img">
+                    <div class="gallery__img">
+                      <picture>
+                        <source srcset="img/gallery-img.jpg" media="" type="">
+                        <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="gallery__col-img">
+                    <div class="gallery__img">
+                      <picture>
+                        <source srcset="img/gallery-img.jpg" media="" type="">
+                        <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
+                      </picture>
+                    </div>
+
+                    <a href="#" class="btn  gallery__link">Всі фотографії</a>
+                  </div>
+
+                </div>
+
               </div>
 
-              <div class="gallery__img">
-                <picture>
-                  <source srcset="img/gallery-img.jpg" media="" type="">
-                  <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
-                </picture>
-              </div>
-
-              <div class="gallery__img">
-                <picture>
-                  <source srcset="img/gallery-img.jpg" media="" type="">
-                  <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
-                </picture>
-              </div>
-
-              <div class="gallery__img">
-                <picture>
-                  <source srcset="img/gallery-img.jpg" media="" type="">
-                  <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
-                </picture>
-              </div>
-
-              <div class="gallery__img">
-                <picture>
-                  <source srcset="img/gallery-img.jpg" media="" type="">
-                  <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
-                </picture>
+              <div class="gallery__col-2">
+                <div class="gallery__img">
+                  <picture>
+                    <source srcset="img/gallery-img.jpg" media="" type="">
+                    <img src="img/gallery-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </div>
 
                 <a href="#" class="btn  gallery__link">Всі фотографії</a>
               </div>
@@ -431,17 +449,6 @@
           </section>
 
         </div>
-
-        <!-- <div class="container">
-
-          <h3>Ghdtn</h3>
-          <a href="#" class="btn">Кнопка</a>
-          <button class="btn">Кнопка меню</button>
-          <a href="#" class="btn  btn--pagination-num">5</a>
-          <button class="btn  btn--prev">Prev</button>
-          <a href="#" class="btn  btn--next btn--disabled">Next</a>
-
-        </div> -->
 
       </main>
 
