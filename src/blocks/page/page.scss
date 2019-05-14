@@ -165,24 +165,6 @@ img {
       padding-left: 0;
       padding-right: 0;
     }
-
-    @media (min-width: $screen-md) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @media (min-width: $screen-lg) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @media (min-width: $screen-xl) {
-      $padding-min: 80px; // нужный отступ от края экрана
-      $half-screen-xl: $screen-xl / 2 - $padding-min;
-      // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
-      padding-left: calc(50% - #{$half-screen-xl});
-      padding-right: calc(50% - #{$half-screen-xl});
-    }
   }
 }
 

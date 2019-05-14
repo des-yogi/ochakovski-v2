@@ -1,22 +1,12 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/pagination/pagination.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="pagination">
-  <a href="" class="pagination__item">1</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">5</a>
-  <a href="" class="pagination__item  pagination__item--active">6</a>
-  <a href="" class="pagination__item">123</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">999</a>
-</div>
-
 -->
+
+<section class="pagination">
+  <h4 class="visually-hidden">Посторінкова навігація</h4>
+  <a href="#" class="btn  btn--prev  pagination__item" aria-label="Назад"></a>
+  <a href="#" class="btn  pagination__item">1</a>
+  <a href="#" class="btn  pagination__item">2</a>
+  <a href="#" class="btn  pagination__item  pagination__item--active">3</a>
+  <a href="#" class="btn  btn--next  pagination__item" aria-label="Вперед"></a>
+</section>

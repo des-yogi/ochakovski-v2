@@ -1,0 +1,41 @@
+.specifications {
+  margin-top: 50px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-intro {
+    @include col(xs, 12);
+  }
+
+  &__col-form {
+    @include col(xs, 12);
+  }
+
+  &__col-form-inner {
+    @include col(xs, 12);
+    @include col(md, 6);
+
+    img {
+      max-height: 75px;
+    }
+  }
+
+  &__intro {
+    padding: 25px 20px;
+    background-color: $white;
+  }
+
+  &__form {
+    padding: 25px 20px;
+    background-color: $gray-darker;
+
+    h2,
+    .error {
+      color: $white;
+    }
+  }
+
+  &__intro-descr {
+
+  }
+}

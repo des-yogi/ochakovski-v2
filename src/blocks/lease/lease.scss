@@ -8,6 +8,15 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  .h2 {
+    margin-bottom: 25px;
+    color: $white;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 35px;
+    }
+  }
+
   &__title {
     color: $white;
   }
@@ -45,6 +54,21 @@
 
     @media (min-width: $screen-xl) {
       margin-bottom: 0;
+    }
+
+    &--page {
+
+      &:last-child {
+
+        @media (min-width: $screen-md) {
+          @include col-offset(md, 0);
+          margin-bottom: 25px;
+        }
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -139,5 +163,11 @@
     position: relative;
     margin-bottom: 0;
     font-size: 14px;
+  }
+
+  &--page {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
   }
 }

@@ -44,7 +44,8 @@
     "lang-switcher": [],
     "language-select": [],
     "pushy": [],
-    "copyrights": []
+    "copyrights": [],
+    "specifications": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
