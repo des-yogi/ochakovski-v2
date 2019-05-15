@@ -1,33 +1,47 @@
 .specifications {
   margin-top: 50px;
+  box-shadow: $box-shadow;
+
+  @media (min-width: $screen-xl) {
+    margin-top: 25px;
+    background-color: $white;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__col-intro {
     @include col(xs, 12);
+    @include col(xl, 7);
   }
 
   &__col-form {
     @include col(xs, 12);
+    @include col(xl, 5);
   }
 
   &__col-form-inner {
     @include col(xs, 12);
     @include col(md, 6);
-
-    img {
-      max-height: 75px;
-    }
+    @include col(xl, 12);
   }
 
   &__intro {
     padding: 25px 20px;
     background-color: $white;
+
+    @media (min-width: $screen-xl) {
+      height: 100%;
+      background: none;
+    }
   }
 
   &__form {
     padding: 25px 20px;
     background-color: $gray-darker;
+    //background-image: url(../img/specs-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h2,
     .error {

@@ -51,7 +51,9 @@
           <div class="container">
             <div class="header-block">
               <h1>Оренда офісу</h1>
-              <p class="header-block__intro">Незалежності від специфіки, будь-який бізнес потребує приміщення під офіс. Тож нехай він буде затишний та сучасний одночасно. Бізнес-центр "Очаківський" має усе для забезпечення комфорту ваших працівників.</p>
+              <div class="header-block__intro">
+                <p>Незалежності від специфіки, будь-який бізнес потребує приміщення під офіс. Тож нехай він буде затишний та сучасний одночасно. Бізнес-центр "Очаківський" має усе для забезпечення комфорту ваших працівників.</p>
+              </div>
             </div>
           </div>
 
@@ -139,7 +141,7 @@
 
                 <div class="specifications__col-form">
 
-                  <div class="specifications__form">
+                  <div class="b-lazy  specifications__form" data-src="img/specs-bg.jpg">
 
                     <form id="lease-order" class="form" action="" method="post">
                       <h2 class="form__title">Відправити заявку</h2>
@@ -166,15 +168,9 @@
                           </div>
                         </div>
 
-                        <!-- <div class="specifications__col-form-inner">
-                          <div class="form__group">
-                            <img src="img/recapcha.jpg" alt="" height="78">
-                          </div>
-                        </div> -->
-
                         <div class="specifications__col-form-inner">
                           <div class="form__group">
-                            <label>
+                            <label class="form__agreement-wrapper">
                               <input class="form__agreement" type="checkbox" name="agreement" value="" checked>
                               <span class="form__agreement-label">Дозволяю обробку персональної інформації</span>
                             </label>

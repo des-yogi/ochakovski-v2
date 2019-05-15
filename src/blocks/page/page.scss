@@ -119,7 +119,7 @@ img {
     padding-top: 50px;
     padding-bottom: 50px;
 
-    &:after {
+    &::after {
       position: absolute;
       z-index: -1;
       top: 0;
@@ -132,6 +132,41 @@ img {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+  }
+
+  &--contacts {
+    padding-bottom: 0;
+
+    &::after {
+      height: 100%;
+      //display: none;
+    }
+  }
+
+  &--page-404 {
+
+    @media (min-width: $screen-md) {
+      padding-top: 90px;
+      padding-bottom: 100px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 140px;
+      padding-bottom: 150px;
+    }
+
+    &::after {
+      height: 100%;
+      background-image:
+        linear-gradient(to top, $color-warning, $color-warning 44%, rgba(255, 255, 255, 0) 44% ),
+        url(../img/page-404-bg.jpg);
+
+      @media (min-width: $screen-md) {
+        background-image:
+          linear-gradient(to left, $color-warning, $color-warning 49%, rgba(255, 255, 255, 0) 49% ),
+          url(../img/page-404-bg.jpg);
+      }
     }
   }
 }

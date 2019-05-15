@@ -35,17 +35,18 @@
     "news-page": [],
     "lease-request": [],
     "header-block": [],
-    "gallery-item": [],
     "page-404": [],
     "service-descr": [],
-    "service-slider": [],
     "service-price": [],
+    "service-page": [],
     "order-modal": [],
     "lang-switcher": [],
     "language-select": [],
     "pushy": [],
     "copyrights": [],
-    "specifications": []
+    "specifications": [],
+    "gallery-page": [],
+    "special-offer": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -8,9 +8,6 @@
     min-height: 21px;
     margin-bottom: 5px;
     font-size: 12px;
-    //white-space: nowrap;
-    //overflow: hidden;
-    //text-overflow: ellipsis;
     color: $color-warning;
   }
 
@@ -58,6 +55,10 @@
       //outline: 1px solid $color-warning;
       border-color: $color-warning;
     }
+
+    &--textarea {
+      min-height: 126px;
+    }
   }
 
   &__submit {
@@ -65,7 +66,7 @@
     display: inline-block;
     width: 100%;
     padding: $field-padding-vertical  $field-padding-horizontal * 2;
-    margin: 0 0 26px 0;
+    margin: 0 0 10px 0;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;

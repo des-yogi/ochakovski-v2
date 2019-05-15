@@ -81,6 +81,7 @@
     background-color: $white;
     color: $text-color;
     overflow: hidden;
+    box-shadow: $box-shadow;
 
     @media (min-width: $screen-md) {
       max-width: none;

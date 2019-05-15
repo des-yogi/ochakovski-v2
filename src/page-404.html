@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <!-- Pushy Menu -->
+  <nav class="pushy pushy-right">
+    <div class="pushy-content">
+      <div class="pushy-content__logo">
+        <img src="img/ochakovski_logo-opt.svg" alt="logo">
+      </div>
+      <ul class="pushy-list">
+        <li class="pushy-link"><a href="#">Новини</a></li>
+        <li class="pushy-link"><a href="#">Оренда</a></li>
+        <!-- Submenu -->
+        <li class="pushy-submenu">
+          <a class="">Сервіси</a>
+          <ul>
+            <li class="pushy-link"><a href="#">Автомийка</a></li>
+            <li class="pushy-link"><a href="#">Лаунж-зона та кафе</a></li>
+            <li class="pushy-link"><a href="#">Паркінг</a></li>
+          </ul>
+        </li>
+        <li class="pushy-link"><a href="#">Про нас</a></li>
+        <li class="pushy-link"><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Site Overlay -->
+  <div class="site-overlay"></div>
+
+  <div id="container" class="page__inner">
+    <div class="page__content">
+
+      <div class="container" style="background-color: #fff;">
+        @@include('blocks/page-header/page-header.html')
+      </div>
+
+      <main class="main  main--bg  main--page-404" role="main">
+
+        <article class="page-404">
+
+          <div class="container">
+
+            <div class="row">
+
+              <div class="page-404__col">
+                <div class="page-404__text">
+                  <h1>Сторінку не знайдено<br>або не існує… :)</h1>
+                  <a href="index.html" class="btn  page-404__to-home">Повернутися на головну</a>
+                </div>
+              </div>
+
+              <div class="page-404__col">
+                <div class="page-404__num">
+                  <h2>404 <span class="visually-hidden">сторінка</span></h2>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </main>
+
+    </div>
+
+      @@include('blocks/page-footer/page-footer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

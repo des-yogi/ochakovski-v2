@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <!-- Pushy Menu -->
+  <nav class="pushy pushy-right">
+    <div class="pushy-content">
+      <div class="pushy-content__logo">
+        <img src="img/ochakovski_logo-opt.svg" alt="logo">
+      </div>
+      <ul class="pushy-list">
+        <li class="pushy-link"><a href="#">Новини</a></li>
+        <li class="pushy-link"><a href="#">Оренда</a></li>
+        <!-- Submenu -->
+        <li class="pushy-submenu">
+          <a class="">Сервіси</a>
+          <ul>
+            <li class="pushy-link"><a href="#">Автомийка</a></li>
+            <li class="pushy-link"><a href="#">Лаунж-зона та кафе</a></li>
+            <li class="pushy-link"><a href="#">Паркінг</a></li>
+          </ul>
+        </li>
+        <li class="pushy-link"><a href="#">Про нас</a></li>
+        <li class="pushy-link"><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Site Overlay -->
+  <div class="site-overlay"></div>
+
+  <div id="container" class="page__inner">
+    <div class="page__content">
+
+      <div class="container" style="background-color: #fff;">
+        @@include('blocks/page-header/page-header.html')
+      </div>
+
+      <main class="main  main--bg" role="main">
+
+        <article class="service-page">
+
+          <div class="container">
+            <header class="header-block">
+              <h1>Галерея Бізнес-Центру</h1>
+              <div class="header-block__descr">
+
+              </div>
+            </header>
+          </div>
+
+
+
+        </article>
+
+      </main>
+
+    </div>
+
+      @@include('blocks/page-footer/page-footer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

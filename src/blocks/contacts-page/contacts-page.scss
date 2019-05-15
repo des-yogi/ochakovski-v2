@@ -1,9 +1,126 @@
-// В этом файле должны быть стили для БЭМ-блока contacts-page, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .contacts-page {
 
   $block-name:                &; // #{$block-name}__element
 
+  .contacts-bottom {
+    padding-top: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 0;
+    }
+  }
+
+  .contacts-bottom__title {
+    //font-size: ;
+  }
+
+  .contacts-bottom__address-wrapper {
+    @include col(md, 7);
+    @include col(xl, 8);
+    padding-left: 0;
+    margin-bottom: 35px;
+    color: $white;
+
+    & > *,
+    .h4 {
+      color: $white;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 0;
+    }
+  }
+
+  .contacts-bottom__col-text {
+    margin-bottom: 45px;
+    @include col(md, 12);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .contacts-bottom__map {
+
+    @media (min-width: $screen-md) {
+      height: 380px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 420px;
+    }
+  }
+
+  .form__title {
+    color: $white;
+  }
+
+  .specifications__col-form-inner {
+    @include col(md, 12);
+  }
+
+  .contacts-bottom__list {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .contacts-bottom__list-item {
+
+    @media (min-width: $screen-xl) {
+      width: calc(50% - 40px);
+
+      &:nth-child(2) {
+        order: 2;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+      }
+
+      &:nth-child(4) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+         order: 3;
+      }
+    }
+  }
+
+  .contacts-bottom__link {
+    word-break: break-all; // Принудительный перенос длинных слов
+    word-wrap: break-word;
+  }
+
+  &__form-wrapper {
+    @include col(md, 5);
+    @include col(xl, 4);
+
+    @media (min-width: $screen-md) {
+      padding-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 0;
+    }
+  }
 }

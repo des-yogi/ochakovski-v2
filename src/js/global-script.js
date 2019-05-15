@@ -78,6 +78,30 @@
     }
   });
 
+  var serviceNav = new Swiper ('.service-price__nav', {
+    slidesPerView: 1,
+    grabCursor: true,
+    breakpointsInverse: true,
+    breakpoints: {
+      // when window width is >= 768px
+      480: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 4
+      }
+    }
+  });
+
+  var servicePrice = new Swiper ('.service-price__price', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grabCursor: true,
+    hashNavigation: {
+      watchState: true,
+    }
+  });
+
 }());
 
 (function(){
