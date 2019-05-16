@@ -3,6 +3,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 7px 0;
+
+  @media (min-width: $screen-xl) {
+    padding: 0;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
 }

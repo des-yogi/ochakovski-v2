@@ -71,13 +71,14 @@
     "yaspeller": "^5.0.1"
   },
   "dependencies": {
-    "picturefill": "^3.0.3",
-    "jquery": "^3.4.1",
-    "object-fit-images": "^3.2.4",
-    "swiper": "^4.5.0",
-    "blazy": "^1.8.2",
+    "@cmyee/pushy": "^1.2.0",
     "@fancyapps/fancybox": "^3.5.7",
+    "blazy": "^1.8.2",
+    "jquery": "^3.4.1",
     "metismenu": "^3.0.4",
-    "svg4everybody": "^2.1.9"
+    "object-fit-images": "^3.2.4",
+    "picturefill": "^3.0.3",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^4.5.0"
   }
 }

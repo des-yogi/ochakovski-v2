@@ -1,9 +1,85 @@
-// В этом файле должны быть стили для БЭМ-блока features, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $white;
+  box-shadow: $box-shadow;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-last-child(-n+2) {
+        @media (min-width: $screen-md) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__item {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-header {
+    width: 56px;
+    height: 56px;
+    flex-basis: 56px;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 84px;
+      height: 84px;
+      flex-basis: 84px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+
+    @media (min-width: $screen-md) {
+      flex: 1 1;
+    }
+  }
+
+  &__item-title {
+
+    @media (min-width: $screen-md) {
+      margin-top: 5px;
+    }
+  }
+
+  &__item-desc {
+    margin-bottom: 0;
+  }
 }

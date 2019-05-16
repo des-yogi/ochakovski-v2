@@ -1,16 +1,16 @@
-// В этом файле должны быть стили для БЭМ-блока form, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-// $font-family:       'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
-
-$font-size--h3:               1.5em !default;
-
-$line-height:                 1.375em !default;
-
 .form {
+  font-family: inherit;
 
   $block-name:                &; // #{$block-name}__element
+
+  .error {
+    display: block;
+    min-height: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: $color-warning;
+  }
 
   &__fieldset {
     min-width: 0;
@@ -33,5 +33,148 @@ $line-height:                 1.375em !default;
     font-weight: 700;
     line-height: $line-height;
     color: currentColor;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__group {
+
+    .error {
+      width: 100%;
+      max-width: 100%;
+      line-height: 1.35;
+      color: $white;
+    }
+
+    &--data-time {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      input {
+        width: calc(50% - 10px);
+      }
+
+    }
+  }
+
+  &__text-input {
+    width: 100%;
+    padding: 11px 10px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: inherit;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      //outline: 1px solid $color-warning;
+      border-color: $color-warning;
+    }
+
+    &--textarea {
+      min-height: 126px;
+    }
+  }
+
+  &__submit {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding: $field-padding-vertical  $field-padding-horizontal * 2;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    text-align: center;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: $font-weight--bold;
+    line-height: $line-height;
+    text-decoration: none;
+    text-transform: none;
+    color: $white;
+    border-radius: $border-radius;
+    border: 3px solid $white;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all $transition-time ease-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $color-warning;
+      background-color: $white;
+      outline: none;
+    }
+
+    &--disabled,
+    &:disabled {
+      cursor: not-allowed;
+      color: $text-muted;
+      background-color: $white;
+      pointer-events: none;
+    }
+  }
+
+  &__agreement {
+    display: none;
+
+    &:checked {
+
+        & ~ ::before {
+          background-color: $color-warning;
+          border-color: $color-warning;
+        }
+    }
+  }
+
+  &__agreement-label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+    margin-top: 15px;
+    font-size: 12px;
+    color: $white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+
+      &::before {
+        border-color: $color-warning;
+      }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      z-index: 1;
+      top: 4px;
+      left: 4px;
+      width: 17px;
+      height: 17px;
+      border: 2px solid $text-muted;
+      background-color: $white;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background-color: $white;
+    }
   }
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  @@include('blocks/pushy/pushy.html')
+
+  <div id="container" class="page__inner">
+    <div class="page__content">
+
+      <div class="container" style="background-color: #fff;">
+        @@include('blocks/page-header/page-header.html')
+      </div>
+
+      <main class="main  main--bg" role="main">
+
+        <div class="gallery-page">
+
+          <div class="container">
+            <div class="header-block">
+              <h1>Галерея Бізнес-Центру</h1>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #1" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="(min-width: 768px)" type=""> <!-- 480x360 -->
+                    <source srcset="img/gallery-page-img.jpg" media="(min-width: 480px)" type=""> <!-- 720x540 -->
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка" width="480" height="360">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #2" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="" type="">
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #3" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="" type="">
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #1" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="" type="">
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #2" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="" type="">
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </a>
+              </div>
+
+              <div class="gallery-page__col">
+                <a href="img/gallery-page-img.jpg" data-fancybox="gallery" data-caption="Картинка #3" class="gallery-page__item">
+                  <picture>
+                    <source srcset="img/gallery-page-img.jpg" media="" type="">
+                    <img src="img/gallery-page-img.jpg" alt="Картинка" title="Картинка">
+                  </picture>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+      @@include('blocks/page-footer/page-footer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

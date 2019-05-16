@@ -1,9 +1,132 @@
-// В этом файле должны быть стили для БЭМ-блока about-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .about-block {
 
   $block-name:                &; // #{$block-name}__element
 
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media (min-width: $screen-md) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__bg {
+    background-color: $white;
+    box-shadow: $box-shadow;
+
+    @media (min-width: $screen-md) {
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+  }
+
+  &__content {
+
+    @media (min-width: $screen-md) {
+      background-color: $white;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__item {
+    padding-bottom: 25px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+
+      @media (min-width: $screen-md) {
+
+        #{$block-name}__img {
+          border-bottom: none;
+          border-right: 5px solid $color-warning;
+        }
+
+        #{$block-name}__text {
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-right: 20px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+
+      @media (min-width: $screen-md) {
+
+        #{$block-name}__col-img {
+          order: 1;
+        }
+
+        #{$block-name}__img {
+          border-bottom: none;
+          border-left: 5px solid $color-warning;
+        }
+
+        #{$block-name}__text {
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 20px;
+        }
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col(md, 6);
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col(md, 6);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 5px solid $color-warning;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 90px !important;
+    }
+  }
+
+  &__para {
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,41 @@
+.gallery-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(lg, 4);
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-last-child(-n + 4) {
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

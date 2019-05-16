@@ -1,0 +1,94 @@
+.special-offer {
+  background-color: $white;
+  box-shadow: $box-shadow;
+
+  @media (min-width: $screen-md) {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+
+    @media (min-width: $screen-md) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-md) {
+      background-color: $white;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__col-text {
+    @include col(md, 6);
+    @include col(xl, 7);
+    order: 1;
+
+    @media (min-width: $screen-md) {
+      order: 0;
+    }
+  }
+
+  &__col-img {
+    @include col(md, 6);
+    @include col(xl, 5);
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    height: 100%;
+    padding-bottom: 25px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 25px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 50px 30px 50px 50px;
+    }
+  }
+
+  &__img {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+    border-bottom: 5px solid $color-warning;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom: none;
+      border-left: 5px solid $color-warning;
+    }
+  }
+}

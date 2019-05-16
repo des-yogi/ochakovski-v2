@@ -1,9 +1,100 @@
-// В этом файле должны быть стили для БЭМ-блока gallery, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .gallery {
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__inner {
+
+  }
+
+  &__col-1,
+  &__col-2 {
+    @include col(xs, 12);
+  }
+
+  &__col-1 {
+    @include col(lg, 8);
+
+    @media (min-width: $screen-lg) {
+
+      #{$block-name}__link {
+        display: none;
+      }
+    }
+
+    #{$block-name}__col-img {
+      @include col(xs, 12);
+      @include col(md, 6);
+      margin-bottom: 20px;
+
+      &:last-child {
+        @include col(md, 12);
+        //max-height: 340px;
+        margin-bottom: 0;
+      }
+    }
+
+    #{$block-name}__img {
+
+      @media (min-width: $screen-md) {
+        max-height: 340px;
+      }
+    }
+  }
+
+  &__col-2 {
+    display: none;
+    @include col(lg, 4);
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #{$block-name}__img {
+
+      @media (min-width: $screen-lg) {
+        height: 100%;
+        flex: 1 1;
+
+        img {
+          width: auto;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    #{$block-name}__link {
+
+      @media (min-width: $screen-lg) {
+        flex: 0 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 20px;
+  }
 }

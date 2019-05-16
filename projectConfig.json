@@ -35,13 +35,19 @@
     "news-page": [],
     "lease-request": [],
     "header-block": [],
-    "gallery-item": [],
     "page-404": [],
     "service-descr": [],
-    "service-slider": [],
     "service-price": [],
+    "service-page": [],
     "order-modal": [],
-    "lang-switcher": []
+    "lang-switcher": [],
+    "language-select": [],
+    "pushy": [],
+    "copyrights": [],
+    "specifications": [],
+    "gallery-page": [],
+    "special-offer": [],
+    "carwash-order-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -61,6 +67,7 @@
     "./node_modules/swiper/dist/js/swiper.js",
     "./node_modules/blazy/blazy.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/@cmyee/pushy/js/pushy.js",
     "./node_modules/metismenu/dist/metisMenu.js"
   ],
   "addJsAfter": [

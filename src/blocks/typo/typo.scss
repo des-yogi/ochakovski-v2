@@ -9,6 +9,18 @@
        url('../fonts/montserrat-v13-latin_cyrillic-ext-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* montserrat-600 - latin_cyrillic-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('../fonts/montserrat-v13-latin_cyrillic-ext-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v13-latin_cyrillic-ext-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 /* montserrat-700 - latin_cyrillic-ext */
 @font-face {
   font-display: swap;
@@ -37,10 +49,15 @@
 body {
   // ТОЛЬКО типографика!
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: $font-size; // 14px на моб. и tab.
+  font-weight: $font-weight;
   line-height: $line-height;
   text-rendering: optimizeLegibility;
   color: $text-color;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size * 1.143;
+  }
 }
 
 .h1,
@@ -69,6 +86,19 @@ h2 {
   margin-bottom: 0;
 }
 
+.h2,
+h2 {
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 35px;
+  }
+}
+
 .h3,
 .h4,
 .h5,
@@ -83,39 +113,43 @@ h6 {
 
 .h1,
 h1 {
-  font-size: $font-size * 1.625;
+  font-size: $font-size * 2;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size * 2.286;
+  }
+}
+
+.h2,
+h2 {
+  font-size: $font-size * 1.714;
 
   @media (min-width: $screen-lg) {
     font-size: $font-size * 2;
   }
 }
 
-.h2,
-h2 {
-  font-size: $font-size * 1.625;
-
-  @media (min-width: $screen-lg) {
-    font-size: $font-size * 1.75;
-  }
-}
-
 .h3,
 h3 {
-  font-size: $font-size * 1.25;
+  font-size: $font-size * 1.426;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size * 1.5;
+    font-size: $font-size * 1.714;
   }
 }
 
 .h4,
 h4 {
-  font-size: $font-size;
+  font-size: $font-size * 1.143;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size * 1.286;
+  }
 }
 
 .h5,
 h5 {
-  font-size: $font-size * 0.75;
+  font-size: $font-size * 0.9;
 }
 
 .h6,
@@ -136,6 +170,13 @@ figure {
   margin-bottom: ($line-height / 2);
   font-weight: $font-weight;
   color: currentColor;
+  hyphens: auto;
+  // word-break: break-all; // Принудительный перенос длинных слов
+  // word-wrap: break-word;
+}
+
+dd {
+  hyphens: auto;
 }
 
 address {
@@ -157,6 +198,7 @@ ul ol {
 
 li {
   line-height: inherit;
+  hyphens: auto;
 }
 
 hr {
@@ -189,4 +231,19 @@ blockquote {
   padding: 0;
   margin-left: 0;
   margin-right: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  // word-break: break-all; // Принудительный перенос длинных слов
+  word-wrap: break-word;
+  // transition: all 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    //text-decoration: underline;
+    color: $color-warning;
+  }
 }

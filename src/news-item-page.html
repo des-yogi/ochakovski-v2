@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  @@include('blocks/pushy/pushy.html')
+
+  <div id="container" class="page__inner">
+    <div class="page__content">
+
+      <div class="container" style="background-color: #fff;">
+        @@include('blocks/page-header/page-header.html')
+      </div>
+
+      <main class="main  main--bg" role="main">
+
+        <article class="news-page">
+
+          <div class="container">
+            <div class="row  row--btn">
+              <div class="news-page__col-img">
+                <a href="news.html" class="btn  news-page__back-btn">
+                  <span class="news-page__icon">
+                    <svg width="10" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-back"></use>
+                    </svg>
+                  </span>
+                  <span class="news-page__name-btn">
+                    Всі новини
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+
+            <div class="row  news-page__article">
+
+              <div class="news-page__col-img">
+                <div class="news-page__img">
+                  <picture>
+                    <source srcset="img/news-page-img.jpg" media="(min-width: 1280px)" type="">
+                    <source srcset="img/news-page-img.jpg" media="(min-width: 768px)" type="">
+                    <img src="img/news-page-img.jpg" alt="Картинка">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="news-page__col-text">
+                <div class="news-page__text">
+                  <span class="publishedon">01.01.2018</span>
+                  <h1>З Новим Роком!</h1>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                  <p>1. Місцезнаходження. Незалежно від того, як часто вам доводиться приймати відвідувачів та партнерів у себе в офісі. Приміщення, розташоване якомога близько до центру міста чи основних магістралей міста - забезпечує економію часу та допоможе забезпечити приплив клієнтів.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </main>
+
+    </div>
+
+      @@include('blocks/page-footer/page-footer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

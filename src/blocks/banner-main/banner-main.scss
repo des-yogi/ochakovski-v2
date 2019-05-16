@@ -1,9 +1,25 @@
-// В этом файле должны быть стили для БЭМ-блока banner-main, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .banner-main {
+  position: relative;
+  background-color: $gray-light;
+  height: 180px;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    height: 300px;
+  }
+
+  @media (min-width: $screen-xl) {
+    height: 450px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+  }
 }
