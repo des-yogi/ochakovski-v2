@@ -1,6 +1,7 @@
 .contacts-bottom {
   padding-top: 40px;
   background-color: $white;
+  box-shadow: $box-shadow;
 
   @media (min-width: $screen-md) {
     padding-bottom: 40px;

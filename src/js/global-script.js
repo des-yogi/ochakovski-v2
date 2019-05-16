@@ -105,6 +105,38 @@
 }());
 
 (function(){
+
+  const swiperLinks = document.querySelectorAll('.service-price__nav a');
+
+  const hashChangeHandler = function (e) {
+    swiperLinks.forEach(function(link, i) {
+      if (link.hash !== window.location.hash) {
+        link.classList.remove('active');
+      }
+      else {
+        link.classList.add('active');
+      }
+    });
+
+    if (e.target.hash === window.location.hash) {
+      e.target.classList.add('active');
+    }
+  };
+
+  swiperLinks.forEach(function(link, i) {
+    if (i === 0) {
+      link.classList.add('active');
+      window.location.hash = link.hash;
+    }
+  });
+
+  if (swiperLinks) {
+    window.addEventListener('hashchange', hashChangeHandler, false);
+  }
+
+}());
+
+(function(){
   // code
   var bLazy = new Blazy({
     selector: '.b-lazy'

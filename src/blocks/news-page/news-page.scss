@@ -91,6 +91,12 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    &--lease {
+      @include col-offset(md, 0);
+      @include col(md, 5);
+      @include col(xl, 4);
+    }
   }
 
   &__col-text {
@@ -106,6 +112,12 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    &--lease {
+      @include col-offset(md, 0);
+      @include col(md, 7);
+      @include col(xl, 8);
+    }
   }
 
   &__img {
@@ -117,6 +129,14 @@
       width: 100%;
       object-fit: cover;
       object-position: center;
+    }
+
+    &--lease {
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -137,6 +157,51 @@
     @media (min-width: $screen-xl) {
       margin-top: 50px;
       padding: 35px 40px;
+    }
+  }
+
+  &__lease-list {
+
+  }
+
+  &__lease-list-wrapper {
+
+  }
+
+  &__lease-attrib {
+
+  }
+
+  &__lease-descr {
+    margin-left: 0;
+  }
+
+  &__office-plan {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 35px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }

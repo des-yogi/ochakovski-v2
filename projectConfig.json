@@ -46,7 +46,8 @@
     "copyrights": [],
     "specifications": [],
     "gallery-page": [],
-    "special-offer": []
+    "special-offer": [],
+    "carwash-order-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

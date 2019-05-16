@@ -10,32 +10,7 @@
 
 <body>
 
-  <!-- Pushy Menu -->
-  <nav class="pushy pushy-right">
-    <div class="pushy-content">
-      <div class="pushy-content__logo">
-        <img src="img/ochakovski_logo-opt.svg" alt="logo">
-      </div>
-      <ul class="pushy-list">
-        <li class="pushy-link"><a href="#">Новини</a></li>
-        <li class="pushy-link"><a href="#">Оренда</a></li>
-        <!-- Submenu -->
-        <li class="pushy-submenu">
-          <a class="">Сервіси</a>
-          <ul>
-            <li class="pushy-link"><a href="#">Автомийка</a></li>
-            <li class="pushy-link"><a href="#">Лаунж-зона та кафе</a></li>
-            <li class="pushy-link"><a href="#">Паркінг</a></li>
-          </ul>
-        </li>
-        <li class="pushy-link"><a href="#">Про нас</a></li>
-        <li class="pushy-link"><a href="#">Контакти</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Site Overlay -->
-  <div class="site-overlay"></div>
+  @@include('blocks/pushy/pushy.html')
 
   <div id="container" class="page__inner">
     <div class="page__content">
@@ -150,7 +125,7 @@
                 <div class="row">
 
                   <div class="service-price__order-col-btn">
-                    <button class="btn" type="button">Записатись на автомийку</button>
+                    <a class="btn" data-fancybox data-src="#carwash-order" href="javascript:;">Записатись на автомийку</a>
                   </div>
 
                   <div class="service-price__order-col-text">
@@ -162,9 +137,10 @@
                 </div>
               </div>
 
-              <h2 class="service-price__title">Прайс-лист</h2>
+              <h2 class="service-price__title">Прайс-лист <span class="service-price__subtitle">(Ціна вказана в грн.)</span></h2>
 
               <div class="service-price__nav  swiper-container" role="navigation">
+
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a href="#car" class="h3">Легкова</a>
@@ -179,6 +155,7 @@
                     <a href="#minibus" class="h3">Мікроавтобус</a>
                   </div>
                 </div>
+
               </div>
 
               <div class="service-price__price  swiper-container">
@@ -398,27 +375,31 @@
           <section class="special-offer">
 
             <div class="container">
-              <div class="row">
 
-                <div class="special-offer__col-text">
-                  <div class="special-offer__text">
-                    <h2>Спеціальна пропозиція</h2>
-                    <p>Бизнес-центр «Галерея Актер» - это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади.</p>
-                    <p>Аккуратная башенная система объединяет в одно здание два девятиэтажных строения. Архитектурная пышность делового комплекса дополняется небольшими балконами, витражами и мансардами.</p>
+              <div class="special-offer__inner">
+                <div class="row">
+
+                  <div class="special-offer__col-text">
+                    <div class="special-offer__text">
+                      <h2>Спеціальна пропозиція</h2>
+                      <p>Бизнес-центр «Галерея Актер» - это изумительной красоты деловой комплекс, который хорошо проглядывается с Пушкинской площади. Аккуратная башенная система объединяет в одно здание два девятиэтажных строения. Архитектурная пышность делового комплекса дополняется небольшими балконами, витражами и мансардами.</p>
+                    </div>
                   </div>
-                </div>
 
-                <div class="special-offer__col-img">
-                  <div class="special-offer__img">
-                    <picture>
-                      <source srcset="img/special-offer-img.jpg" media="(min-width: 480px)" type="">
-                      <img src="img/special-offer-img.jpg" alt="Картинка" title="Картинка" width="480" height="360">
-                    </picture>
+                  <div class="special-offer__col-img">
+                    <div class="special-offer__img">
+                      <picture>
+                        <source srcset="img/special-offer-img.jpg" media="(min-width: 480px)" type="">
+                        <img src="img/special-offer-img.jpg" alt="Картинка" title="Картинка" width="480" height="360">
+                      </picture>
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
+
             </div>
+
           </section>
 
 
@@ -430,6 +411,47 @@
 
       @@include('blocks/page-footer/page-footer.html')
 
+  </div>
+
+  <div class="carwash-order-modal" style="display: none;" id="carwash-order">
+    <header class="carwash-order-modal__header">
+      <h3>Записатись на автомийку</h3>
+    </header>
+
+    <div class="carwash-order-modal__content">
+
+      <form id="carwash-order-form" class="form" action="" method="post">
+
+        <div class="form__group">
+          <input class="form__text-input" type="text" name="name" value="" placeholder="Ваше имя">
+          <span class="error"></span>
+        </div>
+
+        <div class="form__group">
+          <input class="form__text-input" type="tel" name="tel" value="" placeholder="Ваш телефон">
+          <span class="error"></span>
+        </div>
+
+        <div class="form__group  form__group--data-time">
+          <input class="form__text-input" type="date" name="date" value="" placeholder="Дата">
+          <input class="form__text-input" type="time" name="time" value="" placeholder="Время">
+          <span class="error"></span>
+        </div>
+
+        <div class="form__group  form__group--submit">
+          <button class="form__submit" type="submit">Надіслати</button>
+        </div>
+
+        <div class="form__group">
+          <label class="form__agreement-wrapper">
+            <input class="form__agreement" type="checkbox" name="agreement" value="" checked>
+            <span class="form__agreement-label">Дозволяю обробку персональної інформації</span>
+          </label>
+        </div>
+
+      </form>
+
+    </div>
   </div>
 
   @@include('_include/page_bottom.html')
