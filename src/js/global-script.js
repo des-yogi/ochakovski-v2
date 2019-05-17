@@ -23,7 +23,7 @@
 
 (function(){
 
-  var newsSlider = new Swiper ('.news__container', {
+  var newsSlider = new Swiper ('#news-slider', {
     preloadImages: false,
     lazy: true,
     watchSlidesVisibility: true,
@@ -44,6 +44,9 @@
         slidesPerView: 2
       },
       992: {
+        slidesPerView: 3
+      },
+      1280: {
         slidesPerView: 3
       }
     }
@@ -78,7 +81,7 @@
     }
   });
 
-  var serviceNav = new Swiper ('.service-price__nav', {
+  var serviceNav = new Swiper ('#carwash-slider-nav', {
     slidesPerView: 1,
     grabCursor: true,
     breakpointsInverse: true,
@@ -93,7 +96,7 @@
     }
   });
 
-  var servicePrice = new Swiper ('.service-price__price', {
+  var servicePrice = new Swiper ('#carwash-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
     grabCursor: true,
