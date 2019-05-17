@@ -132,6 +132,7 @@
     }
 
     &--lease {
+      display: block;
       margin-bottom: 20px;
 
       @media (min-width: $screen-md) {

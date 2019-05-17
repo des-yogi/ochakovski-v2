@@ -1,0 +1,29 @@
+.carwash-special-offer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(lg, 4);
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__card-wrapper {
+
+  }
+}

@@ -48,4 +48,12 @@
   &__publishedon {
     margin-top: auto;
   }
+
+  &--carwash-offer {
+
+    &:hover,
+    &:focus {
+      color: $text-color !important;
+    }
+  }
 }

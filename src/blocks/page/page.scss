@@ -222,8 +222,6 @@ img {
 }
 
 .overlay {
-  //visibility: hidden;
-
   position: absolute;
   display: block;
   top: 0;
@@ -233,16 +231,16 @@ img {
   //z-index: 1;
   content: "";
   background: $color-warning;
-  opacity: 0.95;
-  transform: translateX(-100%);
+  opacity: 0;
+  transform: translateX(-1000px);
   transition: transform $transition-time ease-out;
 }
 
 a:hover,
 a:focus {
 
-  & > .overlay {
-    //visibility: visible;
+  .overlay {
     transform: none;
+    opacity: 0.90;
   }
 }

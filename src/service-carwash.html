@@ -53,65 +53,52 @@
 
           <div class="container">
 
-            <section class="news">
+            <section class="carwash-special-offer">
 
-              <h2 class="news__title">Акції автомийки</h2>
+              <h2 class="carwash-special-offer__title">Акції автомийки</h2>
 
-              <div class="news__container  swiper-container">
+                <div class="row">
 
-                <div class="news__wrapper  swiper-wrapper">
-
-                  <div class="swiper-slide  news__slide">
-                    <a href="#" class="news-card" title="">
-                      <span class="overlay"></span>
+                  <div class="col  carwash-special-offer__card-wrapper">
+                    <div class="news-card  news-card--carwash-offer" title="Акция">
+                      <!-- <span class="overlay"></span> -->
                       <div class="news-card__img">
-                        <img class="swiper-lazy" data-src="img/news-card-img.jpg" alt="Img">
+                        <img class="b-lazy" data-src="img/news-card-img.jpg" alt="Img">
                       </div>
                       <div class="news-card__text">
                         <h4 class="news-card__title">С Новим Роком! Далеко-далеко за словесными горами в стране, гласных и согласных живут гласных и согласных живут.</h4>
                         <span class="news-card__publishedon  publishedon">01.01.2018</span>
                       </div>
-                      <div class="swiper-lazy-preloader"></div>
-                    </a>
+                    </div>
                   </div>
 
-                  <div class="swiper-slide  news__slide">
-                    <a href="#" class="news-card" title="">
-                      <span class="overlay"></span>
+                  <div class="col  carwash-special-offer__card-wrapper">
+                    <div class="news-card  news-card--carwash-offer" title="Акция">
+                      <!-- <span class="overlay"></span> -->
                       <div class="news-card__img">
-                        <img class="swiper-lazy" data-src="img/news-card-img.jpg" alt="Img">
+                        <img class="b-lazy" data-src="img/news-card-img.jpg" alt="Img">
                       </div>
                       <div class="news-card__text">
-                        <h4 class="news-card__title">С Новим Роком!</h4>
+                        <h4 class="news-card__title">С Новим Роком! Далеко-далеко за словесными горами в стране, гласных и согласных живут гласных.</h4>
                         <span class="news-card__publishedon  publishedon">01.01.2018</span>
                       </div>
-                      <div class="swiper-lazy-preloader"></div>
-                    </a>
+                    </div>
                   </div>
 
-                  <div class="swiper-slide  news__slide">
-                    <a href="#" class="news-card" title="">
-                      <span class="overlay"></span>
+                  <div class="col  carwash-special-offer__card-wrapper">
+                    <div class="news-card  news-card--carwash-offer" title="Акция">
+                      <!-- <span class="overlay"></span> -->
                       <div class="news-card__img">
-                        <img class="swiper-lazy" data-src="img/news-card-img.jpg" alt="Img">
+                        <img class="b-lazy" data-src="img/news-card-img.jpg" alt="Img">
                       </div>
                       <div class="news-card__text">
-                        <h4 class="news-card__title">С Новим Роком! Далеко-далеко за словесными горами в стране, гласных и согласных живут.</h4>
+                        <h4 class="news-card__title">С Новим Роком! </h4>
                         <span class="news-card__publishedon  publishedon">01.01.2018</span>
                       </div>
-                      <div class="swiper-lazy-preloader"></div>
-                    </a>
+                    </div>
                   </div>
 
                 </div>
-
-                <div class="controls-wrapper">
-                  <div class="btn  btn--prev "></div>
-                  <a href="#" class="btn  news__page-link">Всі Акції</a>
-                  <div class="btn  btn--next "></div>
-                </div>
-
-              </div>
 
             </section>
 
@@ -139,7 +126,7 @@
 
               <h2 class="service-price__title">Прайс-лист <span class="service-price__subtitle">(Ціна вказана в грн.)</span></h2>
 
-              <div class="service-price__nav  swiper-container" role="navigation">
+              <div id="carwash-slider-nav" class="service-price__nav  swiper-container" role="navigation">
 
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -158,7 +145,7 @@
 
               </div>
 
-              <div class="service-price__price  swiper-container">
+              <div id="carwash-slider" class="service-price__price  swiper-container">
                 <div class="swiper-wrapper">
 
                   <div class="swiper-slide" data-hash="car">
@@ -433,8 +420,8 @@
         </div>
 
         <div class="form__group  form__group--data-time">
-          <input class="form__text-input" type="date" name="date" value="" placeholder="Дата">
-          <input class="form__text-input" type="time" name="time" value="" placeholder="Время">
+          <input class="form__text-input" type="date" name="date" value="">
+          <input class="form__text-input" type="time" name="time" value="">
           <span class="error"></span>
         </div>
 
