@@ -2764,6 +2764,8 @@ a:hover, a:focus {
     overflow: hidden; }
 .news-card__publishedon {
     margin-top: auto; }
+.news-card--carwash-offer:hover, .news-card--carwash-offer:focus {
+    color: #000000 !important; }
 .services {
   margin-top: 50px;
   margin-bottom: 50px; }
@@ -3709,8 +3711,6 @@ a:hover, a:focus {
     margin-bottom: 25px; }
 .carwash-special-offer .col:last-child {
       margin-bottom: 0; }
-.carwash-special-offer .news-card:hover, .carwash-special-offer .news-card:focus {
-    color: #000000 !important; }
 @media (min-width: 480px) {
     .logo {
       width: 207px;
