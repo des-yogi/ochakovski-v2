@@ -2037,6 +2037,7 @@ img {
   font-weight: 500;
   font-size: 14px; }
 .overlay {
+  visibility: hidden;
   position: absolute;
   display: block;
   top: 0;
@@ -2046,14 +2047,15 @@ img {
   content: "";
   background: #CA2E34;
   opacity: 0.95;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
 a:hover > .overlay,
 a:focus > .overlay {
+  visibility: visible;
   -webkit-transform: none;
           transform: none; }
 .page-header {
