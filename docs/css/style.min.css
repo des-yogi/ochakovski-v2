@@ -2047,8 +2047,8 @@ img {
   content: "";
   background: #CA2E34;
   opacity: 0.95;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
