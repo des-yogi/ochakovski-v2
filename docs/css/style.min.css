@@ -2037,7 +2037,6 @@ img {
   font-weight: 500;
   font-size: 14px; }
 .overlay {
-  visibility: hidden;
   position: absolute;
   display: block;
   top: 0;
@@ -2046,18 +2045,18 @@ img {
   left: 0;
   content: "";
   background: #CA2E34;
-  opacity: 0.95;
+  opacity: 0;
   -webkit-transform: translateX(-1000px);
           transform: translateX(-1000px);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
-a:hover > .overlay,
-a:focus > .overlay {
-  visibility: visible;
+a:hover .overlay,
+a:focus .overlay {
   -webkit-transform: none;
-          transform: none; }
+          transform: none;
+  opacity: 0.90; }
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3051,6 +3050,7 @@ a:hover, a:focus {
     -o-object-position: center;
        object-position: center; }
 .news-page__img--lease {
+    display: block;
     margin-bottom: 20px; }
 .news-page__text {
   padding: 25px 15px;
@@ -3242,16 +3242,19 @@ a:hover, a:focus {
       padding-left: 10px;
       padding-right: 10px;
       margin-top: 0;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      color: #BFBFBF; }
+.service-price__nav a.active {
+        color: inherit; }
 .service-price__nav a.active::after {
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #CA2E34; }
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #CA2E34; }
 .service-price__nav::before {
       position: absolute;
       bottom: 2px;
@@ -3693,6 +3696,21 @@ a:hover, a:focus {
       margin: 0; }
 .carwash-order-modal__content p + p {
       margin-top: 0.5em; }
+.carwash-special-offer {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+.carwash-special-offer .col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 25px; }
+.carwash-special-offer .col:last-child {
+      margin-bottom: 0; }
+.carwash-special-offer .news-card:hover, .carwash-special-offer .news-card:focus {
+    color: #000000 !important; }
 @media (min-width: 480px) {
     .logo {
       width: 207px;
@@ -4163,7 +4181,14 @@ a:hover, a:focus {
         padding-left: 25px;
         padding-right: 65px; }
       .carwash-order-modal__content {
-        padding: 35px 25px; } }
+        padding: 35px 25px; }
+      .carwash-special-offer .col {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 10px;
+        padding-right: 10px; } }
 @media (min-width: 768px) and (min-width: 768px) {
   .lease__col:last-child {
     margin-left: 25%; }
@@ -4288,7 +4313,16 @@ a:hover, a:focus {
       margin-bottom: 0; }
     .carwash-order-modal {
       width: 445px;
-      max-width: 480px; } }
+      max-width: 480px; }
+      .carwash-special-offer .col {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.33333%;
+                flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        padding-left: 10px;
+        padding-right: 10px; }
+      .carwash-special-offer .col {
+        margin-bottom: 0; } }
 @media (min-width: 1280px) {
     .logo {
       width: 207px;
