@@ -2,10 +2,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  .publishedon {
+  /* .publishedon {
     margin-top: 0;
     margin-bottom: 1em;
-  }
+  } */
 
   .row {
 
@@ -82,7 +82,9 @@
     @include col(xs, 12);
     @include col-offset(md, 1);
     @include col(md, 10);
-    @include col-offset(xl, 0);
+    @include col-offset(lg, 0);
+    @include col(lg, 5);
+    //@include col-offset(xl, 0);
     @include col(xl, 6);
     padding-left: 0;
     padding-right: 0;
@@ -103,7 +105,9 @@
     @include col(xs, 12);
     @include col-offset(md, 1);
     @include col(md, 10);
-    @include col-offset(xl, 0);
+    @include col-offset(lg, 0);
+    @include col(lg, 7);
+    //@include col-offset(xl, 0);
     @include col(xl, 6);
     padding-left: 0;
     padding-right: 0;
@@ -153,6 +157,10 @@
     @media (min-width: $screen-md) {
       padding-left: 20px;
       padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 35px;
     }
 
     @media (min-width: $screen-xl) {

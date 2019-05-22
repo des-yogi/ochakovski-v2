@@ -12,13 +12,13 @@
       margin-bottom: 0;
     }
 
-    &:nth-last-child(-n + 3) {
+    &:nth-last-child(-n + 2) {
       @media (min-width: $screen-md) {
         margin-bottom: 0;
       }
     }
 
-    &:nth-last-child(-n + 4) {
+    &:nth-last-child(-n + 3) {
       @media (min-width: $screen-lg) {
         margin-bottom: 0;
       }

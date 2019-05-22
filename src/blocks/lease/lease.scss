@@ -37,7 +37,7 @@
   &__col {
     @include col(xs, 12);
     @include col(md, 6);
-    @include col(xl, 4);
+    @include col(lg, 4);
     margin-bottom: 25px;
 
     &:last-child {
@@ -47,13 +47,9 @@
         @include col-offset(md, 3);
       }
 
-      @media (min-width: $screen-xl) {
-        @include col-offset(xl, 0);
+      @media (min-width: $screen-lg) {
+        @include col-offset(lg, 0);
       }
-    }
-
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
     }
 
     &--page {
