@@ -55,7 +55,7 @@
                 &emailFrom=`postman@ochakivskyi.com`
                 &emailTpl=`@FILE chunks/form/lease_order_email.tpl`
                 &emailTo=`des.yogi@gmail.com`
-                &emailSubject=`Заявка на аренду с сайта [[++site_name]]`
+                &emailSubject=`Сообщение с сайта [[++site_name]]`
                 &validate=`name:required,email:email:required,message:required,gard2:blank`
                 &validationErrorMessage=`[[$langs? &uk=`У формі міститися помилки!` &ru=`В форме содержаться ошибки!`]]`
                 &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено!` &ru=`Сообщение успешно отправлено!`]]`

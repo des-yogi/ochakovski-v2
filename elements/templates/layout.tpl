@@ -22,6 +22,12 @@
   <meta name="robots" content="[[+seoTab.robotsTag]]">
 
   <link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]">
+
+  <link rel="preload" href="assets/fonts/montserrat-v13-latin_cyrillic-ext-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-v13-latin_cyrillic-ext-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-v13-latin_cyrillic-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-v13-latin_cyrillic-ext-900.woff2" as="font" type="font/woff2" crossorigin>
+
   <link href="[[!modxMinify?&group=`styles`]]" rel="stylesheet" media="screen">
   <script>
     // Picture element HTML5 shiv
@@ -101,7 +107,7 @@
 
           <div class="language-select-wrapper">
             <ul class="language-select">
-              [[BabelLinks? &tpl=`babelLink` ]] {*&showCurrent=`1`*}
+              [[BabelLinks? &tpl=`babelLink`]] {*&showCurrent=`1`*}
             </ul>
           </div>
 
@@ -117,56 +123,61 @@
   </div>
 
   <footer class="page-footer" role="contentinfo">
-    <section class="contacts-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="contacts-bottom__col-text">
-            <div class="contacts-bottom__address-wrapper">
-              <h2 class="contacts-bottom__title">[[$langs? &uk=`Зв'яжіться з нами` &ru=`Свяжитесь с нами`]]</h2>
-              <dl class="contacts-bottom__list" itemscope itemtype="http://schema.org/Organization">
-                <div class="contacts-bottom__list-item">
-                  <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Адреса` &ru=`Адрес`]]:</dt>
-                  <dd class="contacts-bottom__descr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">[[++company_address]]</span>,
-                    <span itemprop="addressLocality">[[++company_city]]</span>,
-                    <span itemprop="postalCode">[[++company_index]]</span></dd>
-                </div>
-                <div class="contacts-bottom__list-item">
-                  <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Режим роботи` &ru=`Режим работы`]]:</dt>
-                  <dd class="contacts-bottom__descr">
-                    <span itemprop="openingHours" content="[[$langs? &uk=`Пн.-Нед. 00:00-24:00` &ru=`Пн.-Вс. 00:00-24:00`]]">[[++company_worktime]]</span>
-                  </dd>
-                </div>
-                <div class="contacts-bottom__list-item">
-                  <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Телефон` &ru=`Телефон`]]:</dt>
-                  <dd class="contacts-bottom__descr">
-                    <a class="contacts-bottom__link" href="tel:+[[++company_tel]]" itemprop="telephone">[[++company_tel:phone_format]]</a>
-                  </dd>
-                </div>
-                <div class="contacts-bottom__list-item">
-                  <dt class="h4  contacts-bottom__name">E-mail:</dt>
-                  <dd class="contacts-bottom__descr">
-                    <a class="contacts-bottom__link" href="mailto:[[++company_email]]" itemprop="email">[[++company_email]]</a>
-                  </dd>
-                </div>
-                <div class="contacts-bottom__list-item">
-                  <dt class="h4  contacts-bottom__name">Facebook:</dt>
-                  <dd class="contacts-bottom__descr">
-                    <a class="contacts-bottom__link" href="[[++company_fb]]" target="_blank" rel="nofollow noopener" itemprop="sameAs">facebook.com/ochakivskyi</a>
-                  </dd>
-                </div>
-              </dl>
+    [[*template:ne=`8`:then=`
+      <section class="contacts-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="contacts-bottom__col-text">
+              <div class="contacts-bottom__address-wrapper">
+                <h2 class="contacts-bottom__title">[[$langs? &uk=`Зв'яжіться з нами` &ru=`Свяжитесь с нами`]]</h2>
+                <dl class="contacts-bottom__list" itemscope itemtype="http://schema.org/Organization">
+                  <div class="contacts-bottom__list-item">
+                    <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Адреса` &ru=`Адрес`]]:</dt>
+                    <dd class="contacts-bottom__descr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                      <span itemprop="streetAddress">[[++company_address]]</span>,
+                      <span itemprop="addressLocality">[[++company_city]]</span>,
+                      <span itemprop="postalCode">[[++company_index]]</span></dd>
+                  </div>
+                  <div class="contacts-bottom__list-item">
+                    <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Режим роботи` &ru=`Режим работы`]]:</dt>
+                    <dd class="contacts-bottom__descr">
+                      <span itemprop="openingHours" content="[[$langs? &uk=`Пн.-Нед. 00:00-24:00` &ru=`Пн.-Вс. 00:00-24:00`]]">[[++company_worktime]]</span>
+                    </dd>
+                  </div>
+                  <div class="contacts-bottom__list-item">
+                    <dt class="h4  contacts-bottom__name">[[$langs? &uk=`Телефон` &ru=`Телефон`]]:</dt>
+                    <dd class="contacts-bottom__descr">
+                      <a class="contacts-bottom__link" href="tel:+[[++company_tel]]" itemprop="telephone">[[++company_tel:phone_format]]</a>
+                    </dd>
+                  </div>
+                  <div class="contacts-bottom__list-item">
+                    <dt class="h4  contacts-bottom__name">E-mail:</dt>
+                    <dd class="contacts-bottom__descr">
+                      <a class="contacts-bottom__link" href="mailto:[[++company_email]]" itemprop="email">[[++company_email]]</a>
+                    </dd>
+                  </div>
+                  <div class="contacts-bottom__list-item">
+                    <dt class="h4  contacts-bottom__name">Facebook:</dt>
+                    <dd class="contacts-bottom__descr">
+                      <a class="contacts-bottom__link" href="[[++company_fb]]" target="_blank" rel="nofollow noopener" itemprop="sameAs">facebook.com/ochakivskyi</a>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-          </div>
-          <div class="contacts-bottom__col-map">
-            <div id="map" class="contacts-bottom__map">
-              <iframe src="https://snazzymaps.com/embed/39867" style="border:0;width:100%;"></iframe>
-              <!-- AIzaSyDinp2FNdaqkD92GicqU_TG5TpGvOtCMBk -->
+            <div class="contacts-bottom__col-map">
+              <div id="map" class="contacts-bottom__map">
+                <iframe class="b-lazy" data-src="https://snazzymaps.com/embed/39867" style="border:0;width:100%;">
+                  <p>[[$langs? &uk=`Ваш браузер не підтримує iframes` &ru=`Ваш браузер не поддерживает iframes`]]</p>
+                </iframe>
+                <!-- AIzaSyDinp2FNdaqkD92GicqU_TG5TpGvOtCMBk -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    `:else=``]]
+
     <section class="copyrights">
       <div class="container">
         <div class="row">

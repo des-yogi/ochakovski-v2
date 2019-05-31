@@ -1,4 +1,4 @@
-$('.language-select').click(function(){
+$('.language-select').tap(function(){
   $(this).toggleClass('language-select--open');
 })
 

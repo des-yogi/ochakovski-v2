@@ -41,7 +41,6 @@
     margin-bottom: 25px;
 
     &:last-child {
-      margin-bottom: 0;
 
       @media (min-width: $screen-md) {
         @include col-offset(md, 3);
@@ -89,7 +88,8 @@
     &:focus {
 
       #{$block-name}__item-title,
-      #{$block-name}__item-descr {
+      #{$block-name}__item-descr,
+      .publishedon {
         z-index: 1;
         color: $white;
       }
@@ -115,17 +115,10 @@
     }
 
     &--show-more {
+      height: 100%;
 
-      @media (min-width: $screen-xl) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+      img {
         height: 100%;
-
-        img {
-          height: 100%;
-        }
       }
     }
   }

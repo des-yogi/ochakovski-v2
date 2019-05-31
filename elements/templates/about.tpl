@@ -5,7 +5,7 @@
     <article class="about-block">
       <div class="container">
         <div class="header-block">
-          <h1>[[*longtitle:default=`[[*pagetitle]]`]] <br>
+          <h1>[[*longtitle:default=`[[*pagetitle]]`]]<br>
             [[++company_slogan]]</h1>
         </div>
       </div>
