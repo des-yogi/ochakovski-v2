@@ -52,6 +52,14 @@
           padding-right: 20px;
         }
       }
+
+      @media (min-width: $screen-xl) {
+
+        #{$block-name}__text {
+          padding-left: 30px;
+          padding-right: 50px;
+        }
+      }
     }
 
     &:nth-child(even) {
@@ -73,16 +81,29 @@
           padding-left: 20px;
         }
       }
+
+      @media (min-width: $screen-xl) {
+
+        #{$block-name}__text {
+          padding-left: 50px;
+          padding-right: 30px;
+        }
+      }
     }
 
     @media (min-width: $screen-md) {
       padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 0;
     }
   }
 
   &__col-img {
     @include col(xs, 12);
     @include col(md, 6);
+    @include col(xl, 5);
     padding: 0;
 
     @media (min-width: $screen-md) {
@@ -94,6 +115,7 @@
   &__col-text {
     @include col(xs, 12);
     @include col(md, 6);
+    @include col(xl, 7);
     padding-left: 15px;
     padding-right: 15px;
 
@@ -118,15 +140,23 @@
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
 
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
     @media (min-width: $screen-xl) {
-      padding-top: 90px !important;
+      padding-top: 50px !important;
     }
   }
 
   &__para {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
