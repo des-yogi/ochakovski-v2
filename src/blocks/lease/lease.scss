@@ -97,6 +97,11 @@
         z-index: 1;
         color: $white;
       }
+
+      #{$block-name}__item-promo {
+        color: $color-warning;
+        background-color: $white;
+      }
     }
 
     &--show-more {
@@ -164,6 +169,22 @@
     position: relative;
     margin-bottom: 0;
     font-size: 14px;
+  }
+
+  &__item-promo {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    left: 25px;
+    padding: 7px 20px 6px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $color-warning;
+    border-radius: 20px;
+    transition: all $transition-time ease-out;
   }
 
   &--page {

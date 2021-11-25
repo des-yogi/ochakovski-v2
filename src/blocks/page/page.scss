@@ -233,6 +233,7 @@ img {
   background: $color-warning;
   opacity: 0;
   transform: translateX(-1000px);
+  will-change: transform;
   transition: transform $transition-time ease-out;
 }
 
