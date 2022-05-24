@@ -48,7 +48,8 @@
     "gallery-page": [],
     "special-offer": [],
     "carwash-order-modal": [],
-    "carwash-special-offer": []
+    "carwash-special-offer": [],
+    "alert-banner": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
