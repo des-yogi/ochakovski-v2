@@ -44,17 +44,18 @@
       margin-bottom: 0;
 
       @media (min-width: $screen-md) {
-        @include col-offset(md, 3);
+      //   @include col-offset(md, 3);
+        margin-bottom: 25px;
       }
 
       @media (min-width: $screen-xl) {
-        @include col-offset(xl, 0);
+        //@include col-offset(xl, 0);
       }
     }
 
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
-    }
+    // @media (min-width: $screen-xl) {
+    //   margin-bottom: 0;
+    // }
 
     &--page {
 
@@ -125,12 +126,14 @@
 
     &--show-more {
 
-      @media (min-width: $screen-xl) {
+      @media (min-width: $screen-md) {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        bottom: 0;
+        right: 0;
+        //width: 100%;
+        //height: 100%;
 
         img {
           height: 100%;

@@ -239,7 +239,7 @@ a {
 
   // word-break: break-all; // Принудительный перенос длинных слов
   word-wrap: break-word;
-  // transition: all 0.2s ease-out;
+  transition: all $transition-time ease-out;
 
   &:hover,
   &:focus {
